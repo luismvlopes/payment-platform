@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: payment-platform
+
+  datasource:
+    url: jdbc:postgresql://localhost:5433/payment_platform
+    username: payment_user
+    password: payment_password
+
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    open-in-view: false
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+
+  endpoint:
+    health:
+      show-details: always
